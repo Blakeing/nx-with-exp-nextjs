@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-with-exp-nextjs/shared-types": ["libs/shared-types/src/index.ts"]
+      "@nx-with-exp-nextjs/shared-types": ["libs/shared-types/src/index.ts"],
+      "@nx-with-exp-nextjs/shared-components": [
+        "libs/shared-components/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

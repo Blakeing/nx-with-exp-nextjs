@@ -1,9 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import React from 'react';
-
 import { Pokemon } from '@nx-with-exp-nextjs/shared-types';
-
-import styles from './index.module.css';
+import { SharedComponents } from '@nx-with-exp-nextjs/shared-components';
 
 export function Index({
   q,
@@ -29,8 +27,9 @@ export function Index({
   );
 
   return (
-    <div className={styles.page}>
-      <input value={search} onChange={onSetSearch} />
+    <div className="prose py-24 mx-auto lg:prose-xl">
+      <SharedComponents />
+      <input type="search" value={search} onChange={onSetSearch} />
       <ul>
         {pokemon.map(({ id, name: { english } }) => (
           <li key={id}>{english}</li>
