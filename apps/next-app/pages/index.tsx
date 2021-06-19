@@ -27,14 +27,18 @@ export function Index({
   );
 
   return (
-    <div className="prose py-24 mx-auto lg:prose-xl">
-      <SharedComponents />
-      <input type="search" value={search} onChange={onSetSearch} />
-      <ul>
-        {pokemon.map(({ id, name: { english } }) => (
-          <li key={id}>{english}</li>
-        ))}
-      </ul>
+    <div className="relative py-16 bg-white overflow-hidden">
+      <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto">
+          <SharedComponents />
+          <input type="search" value={search} onChange={onSetSearch} />
+          <ul>
+            {pokemon.map(({ id, name: { english } }) => (
+              <li key={id}>{english}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
